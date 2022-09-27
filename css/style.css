@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline-style: solid;
+    outline-color: green;
+}
+
+body{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #eeeeee;
+}
+#corpo-pagina{
+    width: 75%;
+    max-width: 750px;
+    min-width: 500px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+
+/* Estilo area do input das tarefas*/
+#area-input{
+    margin: 20px 0;
+
+    /*Faz o botao ficar colado na caixa do input*/
+    display: flex;
+    flex-flow: row wrap;
+}
+#area-input input{
+    width: 70%;
+    height:50px;
+    font-size: 1.1em;
+    padding-left: 20px;
+}
+button.add-tarefa{
+    width: 30%;
+    background-color: green;
+    height: 50px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+/* Estilo da area das tarefas*/
+.item{
+    display: flex;
+    height: 50px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px grey;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+.item:hover{
+    box-shadow: 0 0 5px grey;
+    background: rgba(0, 128, 0, 0.050);
+}
+.item .icone-tarefa{
+    width: 20%;
+    text-align: center;
+    font-size: 1.5em;
+}
+.item .texto-tarefa{
+    width: 60%;
+    font-size: 1.1em;
+}
+.item .area-delete-tarefa{
+    text-align: center;
+    width: 20%;
+}
+.delete{
+    font-size: 1.5em;
+    border: none;
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+
+}
+.delete span{
+    font-size: 16px;
+}
+
+/* Estilo do item clicado*/
+.mdi-check-circle{
+    color: green;
+}
+.item.clicado{
+    background: rgba(0, 128, 0, 0.150);
+}
+.item.clicado .texto-tarefa{
+    text-decoration:line-through;
+    color: grey;
+}
