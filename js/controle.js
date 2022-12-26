@@ -22,7 +22,7 @@ function addTarefa(){
         </div>
         <div class="area-delete-tarefa">
             <button onclick="deletarTarefa(${contador})" class="delete">
-                <i class="mdi mdi-delete"><span>Deletar</span></i>
+                <i class="mdi mdi-delete"><span></span></i>
             </button>
         </div>
     </div>`;
@@ -55,7 +55,6 @@ function deletarTarefa(id_tarefa){
 function marcarTarefa(id_tarefa){
     var item = document.getElementById(id_tarefa);
     var classe = item.getAttribute('class');
-    console.log(classe);
 
     if(classe == "item"){
         item.classList.add('clicado');
